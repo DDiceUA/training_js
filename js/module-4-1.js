@@ -116,7 +116,14 @@
 // Task 8
 // Напиши функцію, яка приймає об'єкт та нові значення для імені та віку. Функція повинна змінити обидві властивості в об'єкті. Поверни оновлений об'єкт.
 
-function
+// function chaingeNameAndAge(obj, newName, newAge){
+//     obj.name = newName;
+//     obj.age = newAge;
+//     return obj;
+// }
+
+// console.log(chaingeNameAndAge({name : 'Snyezhanna', age : 21, address : 'st. Potka, 75'}, 'Lylalya', 40));
+
 
 //!====================================================
 // Task 9
@@ -124,28 +131,87 @@ function
 // Якщо в об'єкті вже є "email", нічого не роби.
 // Поверни оновлений об'єкт.
 
+// function chechAndAddEmeil(obj, email){
+//     const keys = Object.keys(obj);
+//     if (keys.includes('email')){
+//         return obj;
+//     }else{
+//         obj.email = email;
+//         return  obj;
+//     }
+// }
+
+// console.log(chechAndAddEmeil({name : 'Yulya', age : 28, address : 'st. Ananaska, 145'}, 'kraft1998@gmail.com'));
+// console.log(chechAndAddEmeil({name : 'Ohrip', age : 53, address : 'st. Ivankova, 8', email: 'kotlyar@gmail.com'}, 'navznakulya@gmail.com'));
+
+
+
 //!====================================================
 // Task 10
 // Напиши функцію, яка приймає об'єкт і змінює тип значення властивості "age" з числа на рядок.
 // Поверни оновлений об'єкт.
+
+// function chaingeAgeToString(obj){
+//     obj.age = String(obj.age);
+//     return obj;
+// }
+
+// console.log(chaingeAgeToString({name : 'Andru', age : 43, address : 'st. Kiyv'}));
+
 
 //!====================================================
 // Task 11
 // Напиши функцію, яка приймає об'єкт і змінює значення властивості "address", але тільки якщо ця властивість вже існує.
 // Якщо її немає, поверни об'єкт без змін.
 
+// function chaingeAddres(obj){
+//     if (Object.keys(obj).includes('address')){
+//         obj.address = 'st. Nova, 45';
+//     }
+//     return obj;
+// }
+
+// console.log(chaingeAddres({name : 'Sasha', age : 25, address : 'st. Kharkiv'}));
+// console.log(chaingeAddres({name : 'Masha', age : 17}));
+
 //!====================================================
 // Task 12
 // Напиши функцію, яка приймає об'єкт користувача з властивостями name та сity. Та повертає рядок "User {імя користувача} from {місто користувача}!"
+
+// function nameAndSity(obj){
+//     return `User ${obj.name} from ${obj.city}!`
+// }
+
+// console.log(nameAndSity({name : 'Alex', age : 26, city: 'Kharkiv'}));
+
 
 //!====================================================
 // Task 13
 // Напиши функцію, яка приймає масив з ключами і значеннями (наприклад, [["name", "John"], ["age", 25], ["address", "123 Street"]]) і створює об'єкт з цих пар. Поверни об'єкт.
 
+// function createObj(arr){
+//     const obj = {};
+//     for (const elem of arr){
+//         obj[elem[0]] = elem[1];
+//     }
+//     return obj;
+// }
+
+// console.log(createObj([["name", "John"], ["age", 25], ["address", "123 Street"]]));
+
+
 //!====================================================
 // Task 14
 // Напиши функцію, яка приймає масив об'єктів і змінює в кожному з них властивість "age", збільшуючи її на 1. Поверни оновлений масив об'єктів.
 
+// function addAgeForAll(arr){
+//     for (const item of arr){
+//         item.age += 1;
+//     }
+//     return arr;
+// }
+
+// console.log(addAgeForAll([{name : 'Masha', age : 15},{name : 'Kolya', age : 50},{name : 'Nazar', age : 35},{name : 'Igor', age : 45},{name : 'Sveta', age : 30}]));
 
 
 //!====================================================
@@ -153,11 +219,71 @@ function
 //!====================================================
 // Task 15
 // Створіть об'єкт contactBook, який зберігатиме список контактів та надаватиме методи для додавання, видалення та пошуку контактів.
+// const contactBook = {
+//     users : [{name: 'Alex', age: 26, tel: '+380952655998'}],
 
+//     addContact(name,age,tel){
+//         const nweUser = {
+//             name,
+//             age,
+//             tel,
+//         }
+//         this.users.push(nweUser); 
+//     },
+
+//     deleteUser(index){
+//         this.users.splice(index,1);
+//     },
+//     findUser(atr,value){
+//         const indexsOfUsers = [];
+//         for (const user of this.users){
+//             if (user[atr] === value){
+//                 indexsOfUsers.push(this.users.indexOf(user));
+//             }
+//         }
+//         if (!indexsOfUsers.length){
+//             return `Cant find user with atr ${atr} and value: ${value}`;
+//         }
+//         console.log(`Finded ${indexsOfUsers.length} users with ${atr}:${value}`);
+//         for (const index of indexsOfUsers){
+//             console.log(`⬇ index of this user: ${index} ⬇`);
+//             console.table(this.users[index]); 
+//         }
+//     },
+
+// }
+// console.table(contactBook.users);
+// contactBook.addContact('Vasya', 30, '+380668967665');
+// contactBook.addContact('Zhanna', 42, '+380775689114');
+// console.table(contactBook.users);
+// contactBook.deleteUser(1);
+// console.table(contactBook.users);
+// contactBook.findUser('name','Alex');
+// contactBook.addContact('Roman', 42, '+380953211557');
+// console.table(contactBook.users);
+// contactBook.findUser('age', 42);
+// contactBook.deleteUser(1);
+// console.table(contactBook.users);
 
 //!====================================================
 // Task 16
 // Створіть об'єкт rectangle, який представлятиме прямокутник з методами для обчислення його площі та периметра. Об'єкт повинен приймати довжини двох сторін під час створення.
+
+// function rectangle(width,higth) {
+//     this.perimeter = function(){
+//         return width*2 + higth*2;
+//     };
+//     this.area = function(){
+//         return width * higth;
+//     };
+// }
+
+// const rect4040 = new rectangle(40,40);
+
+// console.log('perimeter:');
+// console.log(rect4040.perimeter());
+// console.log('area:');
+// console.log(rect4040.area());
 
 
 //!====================================================
