@@ -219,6 +219,7 @@
 //!====================================================
 // Task 15
 // Створіть об'єкт contactBook, який зберігатиме список контактів та надаватиме методи для додавання, видалення та пошуку контактів.
+
 // const contactBook = {
 //     users : [{name: 'Alex', age: 26, tel: '+380952655998'}],
 
@@ -264,6 +265,7 @@
 // contactBook.findUser('age', 42);
 // contactBook.deleteUser(1);
 // console.table(contactBook.users);
+
 
 //!====================================================
 // Task 16
@@ -447,6 +449,32 @@
 // reverse(str) - метод, що приймає рядок та повертає його в перевернутому вигляді.
 // ucFirst(str) - метод, що приймає рядок та повертає цей же рядок, зробивши його першу літеру заголовною.
 // ucWords(str) - метод, що приймає рядок та робить заголовною першу літеру кожного слова цього рядка.
+
+// const myString = {
+//     reverse(str){
+//         const letters = str.split('');
+//         const revLetters = [];
+//         for (let i = letters.length -1; i >= 0; i--){
+//             revLetters.push(letters[i]);
+//         }
+//         return revLetters.join('');
+//     },
+//     ucFirst(str){
+//         return str[0].toUpperCase() + str.slice(1);;
+//     },
+//     ucWords(str){
+//         const words = str.split(' ');
+//         for (let i = 0; i < words.length; i++){
+//             words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+//         }
+//         return  words.join(' ');
+//     },
+// }
+
+// console.log(myString.reverse('Hello World'));
+// console.log(myString.ucFirst('hello world'));
+// console.log(myString.ucWords('hello world'));
+
 
 //!====================================================
 // Task 11
