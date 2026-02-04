@@ -1022,3 +1022,42 @@ const heroes = [
 // console.log(HeroesGroupAffiliationHaveAvengers(heroes));
 
 //!======================================
+
+// 30 Напиши функцію, яка приймає масив героїв та повертає масив, де кожен елемент — рядок виду: "NAME has POWER power".
+
+// const heroPower = (heroes) => heroes.map(hero => `${hero.name} has ${hero.powerstats.power} power`);
+// console.log(heroPower(heroes));
+
+//!======================================
+
+// 37 Напиши функцію, яка повертає масив { name, aliasesCount } — кількість псевдонімів для кожного героя, де aliasesCount > 3. Відсортуй результат за спаданням кількості псевдонімів.
+
+// const nameAndAliCount = heroes => heroes.filter(hero => hero.biography.aliases.length > 3).map(hero => [hero.name, hero.biography.aliases.length]).toSorted((a,b) => b[1] - a[1]);
+// console.table(nameAndAliCount(heroes));
+
+//!======================================
+
+// Повертає всіх героїв з парним значенням зросту
+
+// const evenHeight = heroes => heroes.filter(hero => hero.appearance.height[1].split(' ')[0] % 2 === 0 && hero.appearance.height[1].split(' ')[0] != 0);
+// console.log(evenHeight(heroes));
+
+//!======================================
+
+// Повертає масив альянсів героїв з останньою великою літерою
+
+// const lastBioUpper = heroes => heroes.map(hero => hero.biography.aliases.map((elem, i, arr) => arr[i] = elem.slice(0,length-1)+elem.slice(elem.length-1).toUpperCase()));
+// console.log(lastBioUpper(heroes));
+
+
+
+//!======================================
+
+// Напиши функцію, яка повертає масив імен героїв, чия вага (у kg) менша за 80 кг та сила (strength) більше 60. Результат відсортуй за зростанням ваги.
+
+// const namesForKgAndStrnage = arr => arr.filter(heroe => heroe.powerstats.strength > 60 && heroe.appearance.weight[1].split(' ')[0] < 80).toSorted((hero1,hero2) => hero1.appearance.weight[1].split(' ')[0] - hero2.appearance.weight[1].split(' ')[0]).map(hero => hero.name);
+
+// console.log(namesForKgAndStrnage(heroes));
+
+//!======================================
+

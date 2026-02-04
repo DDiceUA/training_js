@@ -46,6 +46,18 @@
 // }
 // capitalizeStrings(['sasha', 'alex', 'small', 'cat', 'abadon', 'axe', 'alhemist','nazar','zahar','ivan', 'Vroclav'],logToConsole);
 
+
+// !===
+
+// const capitalizeStrings = (strings, callback) => callback(strings.forEach((str, index,arr) => arr[index] = str[0].toUpperCase()+str.slice(1)));
+
+// const logToConsole = arg => console.log(arg);    
+
+// const arr = ['sasha', 'alex', 'small', 'cat', 'abadon', 'axe', 'alhemist','nazar','zahar','ivan', 'Vroclav'];
+
+// capitalizeStrings(arr,logToConsole);
+// console.log(arr);
+
 // !==========================================
 
 //5 Сортування чисел: Напишіть функцію sortNumbers(numbers, callback), яка приймає масив чисел numbers та колбек callback. Функція повинна відсортувати числа в масиві за зростанням та передати відсортований масив у колбек.
